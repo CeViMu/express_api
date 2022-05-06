@@ -44,3 +44,10 @@ app.put('/v1/explorers/:id', (req,res) => {
     console.log(`Update explorer with id ${req.params.id}`)
     res.status(200).json({message: "Updated"}) //se regresa info en formato json
 })
+
+app.delete('/v1/explorers/:id', (req,res) => {
+    console.log(`Api Explorers DELETE request ${new Date()}`)
+    console.log(`Delete explorer with id ${req.params.id}`)
+    const requestBody = req.body
+    res.status(200).json({message: "Delated"}) //se regresa info en formato json
+})
