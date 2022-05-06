@@ -23,3 +23,10 @@ app.get('/v1/explorers', (req,res) => {
     //http code status:
     res.status(200).json(explorers) //se regresa info en formato json
 })
+
+app.get('/v1/explorers/:id', (req,res) => {
+    console.log(`Api Explorers GET ALL request ${new Date()}`)
+    console.log(`Getting explorer with id ${req.params.id}`)
+    const explorer = {id:1, name: "Cecilia1"}
+    res.status(200).json(explorer) //se regresa info en formato json
+})
