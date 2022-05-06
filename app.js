@@ -38,3 +38,9 @@ app.post('/v1/explorers', (req,res) => {
     console.log(req.body)
     res.status(201).json({message: "Created"}) //se regresa info en formato json
 })
+
+app.put('/v1/explorers/:id', (req,res) => {
+    console.log(`Api Explorers PUT request ${new Date()}`)
+    console.log(`Update explorer with id ${req.params.id}`)
+    res.status(200).json({message: "Updated"}) //se regresa info en formato json
+})
